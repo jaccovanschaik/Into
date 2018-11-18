@@ -9,7 +9,7 @@ Written to function as the end of a pipeline that generates dependencies for a s
 
 If, instead, you do something like:
 
-    gcc -M foo.c | sort | into foo.d
+    gcc -MM foo.c | into foo.d
 
 then `foo.d` only gets a new modification time if it actually changes, not every time this command is executed. Which means any downstream commands are also only executed if necessary.
 
