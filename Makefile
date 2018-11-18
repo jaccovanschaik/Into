@@ -2,7 +2,7 @@
 #
 # Copyright: (c) 2018 Jacco van Schaik (jacco@jaccovanschaik.net)
 # Created:   2018-11-18
-# Version:   $Id: Makefile 1 2018-11-18 18:14:20Z jacco $
+# Version:   $Id: Makefile 3 2018-11-18 18:48:35Z jacco $
 #
 # This software is distributed under the terms of the MIT license. See
 # http://www.opensource.org/licenses/mit-license.php for details.
@@ -11,6 +11,8 @@
 INTO = into.o
 
 CFLAGS = -g
+
+INSTALL_BIN = $(HOME)/bin
 
 into: $(INTO)
 	$(CC) $(CFLAGS) -o into $(INTO)
