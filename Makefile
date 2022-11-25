@@ -1,8 +1,8 @@
 # Makefile: Description
 #
-# Copyright: (c) 2018 Jacco van Schaik (jacco@jaccovanschaik.net)
+# Copyright: (c) 2018-2022 Jacco van Schaik (jacco@jaccovanschaik.net)
 # Created:   2018-11-18
-# Version:   $Id: Makefile 3 2018-11-18 18:48:35Z jacco $
+# Version:   $Id: Makefile 4 2022-11-25 20:39:32Z jacco $
 #
 # This software is distributed under the terms of the MIT license. See
 # http://www.opensource.org/licenses/mit-license.php for details.

@@ -1,9 +1,9 @@
 /*
  * into.c: Description
  *
- * Copyright: (c) 2018 Jacco van Schaik (jacco@jaccovanschaik.net)
+ * Copyright: (c) 2018-2022 Jacco van Schaik (jacco@jaccovanschaik.net)
  * Created:   2018-11-18
- * Version:   $Id: into.c 1 2018-11-18 18:14:20Z jacco $
+ * Version:   $Id: into.c 4 2022-11-25 20:39:32Z jacco $
  *
  * This software is distributed under the terms of the MIT license. See
  * http://www.opensource.org/licenses/mit-license.php for details.
@@ -74,15 +74,17 @@ int main(int argc, char *argv[])
         perror(argv[1]);
         return 1;
     }
-    else if (statbuf.st_size != input_size) {
+    else if (statbuf.st_size != input_used) {
         must_write = 1;
     }
     else {
-        for (int i = 0; i < input_size; i++) {
+        for (int i = 0; i < input_used; i++) {
             c = fgetc(fp);
 
             if (c == EOF) {
-                fprintf(stderr, "Unexpected end of file on %s after %d bytes.\n", argv[1], i);
+                fprintf(stderr,
+                        "Unexpected end of file on %s after %d bytes.\n",
+                        argv[1], i);
                 exit(1);
             }
             else if (c != input_data[i]) {
