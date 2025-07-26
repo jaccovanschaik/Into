@@ -1,6 +1,6 @@
 # Makefile: Description
 #
-# Copyright: (c) 2018-2022 Jacco van Schaik (jacco@jaccovanschaik.net)
+# Copyright: (c) 2018-2025 Jacco van Schaik (jacco@jaccovanschaik.net)
 # Created:   2018-11-18
 # Version:   $Id: Makefile 4 2022-11-25 20:39:32Z jacco $
 #
@@ -16,6 +16,9 @@ INSTALL_BIN = $(HOME)/bin
 
 into: $(INTO)
 	$(CC) $(CFLAGS) -o into $(INTO)
+
+update:
+	git stash && git pull && git stash pop && make install
 
 clean:
 	rm -f *.o into core into.tgz
