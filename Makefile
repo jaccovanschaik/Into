@@ -20,7 +20,7 @@ into: $(INTO)
 update:
 	git stash push
 	git pull
-	git stash pop
+	-git stash pop
 	make install
 
 clean:
