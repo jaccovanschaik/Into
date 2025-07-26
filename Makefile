@@ -18,7 +18,10 @@ into: $(INTO)
 	$(CC) $(CFLAGS) -o into $(INTO)
 
 update:
-	git stash && git pull && git stash pop && make install
+	git stash push
+	git pull
+	git stash pop
+	make install
 
 clean:
 	rm -f *.o into core into.tgz
